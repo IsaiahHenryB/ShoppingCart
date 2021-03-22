@@ -31,9 +31,11 @@ let allPrices = addPrices(priceOne,priceTwo,priceThree)
 function grandTotal(allprices){
     return  (allPrices * 0.0625)+ allPrices;
 }
-
+function myOrder(orderOne,orderTwo,orderThree){
+    return `You got ${orderOne}, ${orderTwo} and ${orderThree}, huh?`
+}
 // let allPrices = priceOne + priceTwo + priceThree
 // let grandTotal = (allPrices * 0.0625)+(allPrices)
-document.getElementById("name").innerHTML = `This is what you wanted, ${name}.`
+document.getElementById("name").innerHTML = `This is what you wanted, ${name}. ${myOrder(orderOne,orderTwo,orderThree)}`
 document.getElementById("price").innerHTML = `Your total is $${addPrices(priceOne,priceTwo,priceThree).toFixed(2)} plus tax which is $${grandTotal().toFixed(2)}`
 }
